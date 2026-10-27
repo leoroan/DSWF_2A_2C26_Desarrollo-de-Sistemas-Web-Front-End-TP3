@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMail AI</title>
+  <meta name="description" content="Landing de AutoMail AI: propuestas de automatización agéntica para atención al cliente y correo. Bloque S10-A — IFTS 16.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="inicio">
+    <div class="header-container">
+      <a href="#" class="logo-link" aria-label="Ir al inicio">
+        <img src="assets/images/logo.webp" alt="Logo de AutoMail AI" class="logo">
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#startup">Startup y necesidad</a></li>
+          <li><a href="#propuestas">Propuestas</a></li>
+          <li><a href="#r1">R1: Respuesta aprobada</a></li>
+          <li><a href="#r2">R2: Atención prioritaria</a></li>
+          <li><a href="#casos-prueba">Casos de prueba</a></li>
+          <li><a href="#relacion">Relación R1 y R2</a></li>
+          <li><a href="#conclusiones">Conclusiones y límites</a></li>
+          <li><a href="#equipo">Equipo e institución</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-container">
+        <a href="#" class="logo-link" aria-label="Ir al inicio">
+          <img src="assets/images/logo.webp" alt="Logo de AutoMail AI" class="logo" aria-hidden="true">
+        </a>
+        <h1>AutoMail AI</h1>
+        <p class="hero-subtitle">Asistente para clasificar correos y responder consultas frecuentes mediante respuestas aprobadas.</p>
+        <div class="hero-actions">
+          <a href="#propuestas" class="btn btn-primary">Conocer las propuestas</a>
+          <a href="#r1" class="btn btn-outline">Ver diagramas de decisión</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STARTUP -->
+    <section class="section startup" id="startup">
+      <div class="container">
+        <h2>Sobre AutoMail AI</h2>
+        <div class="grid grid-two">
+          <div>
+            <p><strong>Startup:</strong> AutoMail AI</p>
+            <p><strong>Bloque asignado:</strong> S10-A</p>
+            <p><strong>Categoría:</strong> atención al cliente y correo.</p>
+            <p><strong>Institución de referencia:</strong> IFTS 16.</p>
+            <p><strong>Tema del bloque:</strong> respuesta y atención humana.</p>
+          </div>
+          <div>
+            <p><strong>Objetivo de la startup:</strong> asistente para clasificar correos y responder consultas frecuentes mediante respuestas aprobadas.</p>
+            <p><strong>Necesidad identificada:</strong> los equipos de atención reciben un gran volumen de correos de consulta frecuente, mientras que los mensajes de clientes VIP o urgentes requieren atención humana prioritaria. AutoMail AI propone dos flujos agénticos para evaluar cada correo antes de decidir si se solicita una respuesta automática aprobada o se deriva a una persona.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPUESTAS -->
+    <section class="section propuestas" id="propuestas">
+      <div class="container">
+        <h2>Propuestas de automatización agéntica</h2>
+        <p class="section-intro">El trabajo consiste en diseñar dos propuestas de automatización agéntica a partir de dos sentencias asignadas por el docente. A continuación se resumen ambas propuestas; los detalles, diagramas y casos de prueba se desarrollan en sus propias secciones.</p>
+
+        <div class="cards">
+          <article class="card propuesta-card" id="propuesta-r1-resumen">
+            <h3>R1 — Respuesta aprobada y envío controlado</h3>
+            <p>Proponer un agente que analice una solicitud de correo y compruebe todas las condiciones de la sentencia R1 antes de <strong>solicitar</strong> el envío de una respuesta previamente aprobada. El agente no redacta libremente una respuesta nueva ni envía automáticamente si falta alguna condición.</p>
+            <a href="#r1" class="btn btn-small">Ver detalle de R1</a>
+          </article>
+
+          <article class="card propuesta-card" id="propuesta-r2-resumen">
+            <h3>R2 — Atención prioritaria con derivación humana</h3>
+            <p>Proponer un agente que identifique correos de clientes VIP o marcados como urgentes, siempre que <strong>no sean sospechosos</strong>, y los derive a una persona sin responder automáticamente.</p>
+            <a href="#r2" class="btn btn-small">Ver detalle de R2</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- R1 -->
+    <section class="section regla" id="r1">
+      <div class="container">
+        <div class="regla-header">
+          <h2 id="r1-titulo">R1 — Respuesta aprobada y envío controlado</h2>
+          <a href="#propuestas" class="btn btn-small btn-outline">Volver a propuestas</a>
+        </div>
+
+        <div class="sentencia">
+          <h3>Sentencia original R1</h3>
+          <blockquote>
+            “Si el correo es una consulta frecuente clara, existe una respuesta aprobada, no requiere personalización, no contiene un reclamo, no es VIP, urgente ni sospechoso, existe permiso de respuesta automática y no tiene una respuesta enviada ni en curso, el sistema solicita enviar la respuesta aprobada.”
+          </blockquote>
+          <p class="sentencia-nota">La sentencia se muestra completa y literal, tal como fue asignada por el docente.</p>
+        </div>
+
+        <div class="objetivo">
+          <h3>Objetivo de la propuesta R1</h3>
+          <p>Proponer un agente que analice una solicitud de correo y compruebe todas las condiciones de la sentencia antes de solicitar el envío de una respuesta previamente aprobada. El agente no debe redactar libremente una respuesta nueva ni enviar automáticamente si falta alguna condición. La acción definida por la sentencia es <strong>solicitar el envío</strong>, no afirmar que el envío se completó.</p>
+        </div>
+
+        <div class="datos-entrada">
+          <h3>Información de entrada (datos lógicos)</h3>
+          <ul>
+            <li>1. Si el correo corresponde a una consulta frecuente y clara.</li>
+            <li>2. Si existe una respuesta aprobada aplicable.</li>
+            <li>3. Si requiere personalización.</li>
+            <li>4. Si contiene un reclamo.</li>
+            <li>5. Si el cliente es VIP.</li>
+            <li>6. Si está marcado como urgente.</li>
+            <li>7. Si es sospechoso.</li>
+            <li>8. Si existe permiso de respuesta automática.</li>
+            <li>9. Si ya tiene una respuesta enviada.</li>
+            <li>10. Si ya tiene una respuesta en curso.</li>
+          </ul>
+          <p class="nota">No confundas “respuesta enviada” con “respuesta en curso”. Son dos condiciones independientes.</p>
+        </div>
+
+        <div class="condicion-logica">
+          <h3>Condición lógica obligatoria</h3>
+          <p>La condición completa es una conjunción de diez requisitos que deben cumplirse simultáneamente:</p>
+          <pre class="logica">R1 = consulta frecuente y clara
+Y existe respuesta aprobada
+Y no requiere personalización
+Y no contiene reclamo
+Y no es VIP
+Y no es urgente
+Y no es sospechoso
+Y existe permiso de respuesta automática
+Y no tiene respuesta enviada
+Y no tiene respuesta en curso.</pre>
+          <p class="nota">Las diez condiciones deben cumplirse simultáneamente. No se convierten las condiciones negativas en alternativas opcionales.</p>
+        </div>
+
+        <div class="diagrama-wrapper" id="diagrama-r1">
+          <h3>Diagrama gráfico de R1</h3>
+
+          <svg class="diagrama" id="svg-r1" viewBox="0 0 900 930" aria-label="Diagrama de decisión de R1: flujo desde INICIO hasta FIN, con camino SÍ y camino NO" role="img">
+            <title>Diagrama R1 — Respuesta aprobada y envío controlado</title>
+            <desc>Secuencia: INICIO → llega correo → consultar 10 condiciones → decisión conjunta → camino SÍ solicita envío y FIN; camino NO no solicita envío, identifica condición fallida, aplica decisión de diseño (derivar a persona o dejar pendiente) y FIN.</desc>
+            <defs>
+              <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                <path d="M0,0 L0,6 L9,3 z" fill="#1f3a5f"/>
+              </marker>
+              <marker id="arrow-nodo" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+                <path d="M0,0 L0,5 L6,2.5 z" fill="#1f3a5f"/>
+              </marker>
+            </defs>
+
+            <!-- Nodos y flechas R1 -->
+            <rect x="380" y="20" width="140" height="40" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+            <text x="450" y="42" text-anchor="middle" fill="#1f3a5f" font-weight="bold" font-size="14">INICIO</text>
+
+            <line x1="450" y1="60" x2="450" y2="95" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+            <rect x="320" y="95" width="260" height="44" rx="6" fill="#eef4fb" stroke="#1f3a5f" stroke-width="2"/>
+            <text x="450" y="119" text-anchor="middle" fill="#1f3a5f" font-size="13">Llega un correo.</text>
+
+            <line x1="450" y1="139" x2="450" y2="174" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+            <rect x="200" y="174" width="500" height="60" rx="6" fill="#eef4fb" stroke="#1f3a5f" stroke-width="2"/>
+            <text x="450" y="193" text-anchor="middle" fill="#1f3a5f" font-size="12">El agente obtiene o consulta los datos</text>
+            <text x="450" y="209" text-anchor="middle" fill="#1f3a5f" font-size="12">necesarios para evaluar las diez condiciones.</text>
+
+            <g class="condicion">
+              <line x1="450" y1="234" x2="450" y2="253" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+              <rect x="220" y="253" width="460" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+              <text x="450" y="273" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que sea una consulta frecuente y clara.</text>
+            </g>
+            <g class="condicion">
+              <line x1="450" y1="291" x2="450" y2="326" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+              <rect x="240" y="326" width="420" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+              <text x="450" y="346" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que exista una respuesta aprobada.</text>
+            </g>
+            <g class="condicion">
+              <line x1="450" y1="364" x2="450" y2="399" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+              <rect x="230" y="399" width="440" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+              <text x="450" y="419" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que no requiera personalización.</text>
+            </g>
+            <g class="condicion">
+              <line x1="450" y1="437" x2="450" y2="472" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+              <rect x="250" y="472" width="400" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+              <text x="450" y="492" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que no contenga un reclamo.</text>
+            </g>
+            <g class="condicion">
+              <line x1="450" y1="510" x2="450" y2="545" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+              <rect x="260" y="545" width="380" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+              <text x="450" y="565" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que el cliente no sea VIP.</text>
+            </g>
+            <g class="condicion">
+              <line x1="450" y1="583" x2="450" y2="618" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+              <rect x="240" y="618" width="420" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+              <text x="450" y="638" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que el correo no sea urgente.</text>
+            </g>
+            <g class="condicion">
+              <line x1="450" y1="656" x2="450" y2="691" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+              <rect x="250" y="691" width="400" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+              <text x="450" y="711" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que no sea sospechoso.</text>
+            </g>
+            <g class="condicion">
+              <line x1="450" y1="729" x2="450" y2="764" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+              <rect x="230" y="764" width="440" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+              <text x="450" y="784" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que exista permiso de respuesta automática.</text>
+            </g>
+
+            <!-- Rama derecha: permiso OK -> respuesta enviada / en curso -->
+            <line x1="670" y1="783" x2="850" y2="783" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+            <rect x="720" y="783" width="160" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+            <text x="800" y="803" text-anchor="middle" fill="#1f3a5f" font-size="11">Respuesta enviada</text>
+            <line x1="800" y1="821" x2="800" y2="856" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+            <rect x="720" y="856" width="160" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
+            <text x="800" y="876" text-anchor="middle" fill="#1f3a5f" font-size="11">Respuesta en curso</text>
+
+            <!-- Decisión -->
+            <line x1="450" y1="802" x2="450" y2="837" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
+            <rect x="300" y="837" width="300" height="44" rx="6" fill="#fff7ed" stroke="#b45309" stroke-width="2"/>
+            <text x="450" y="861" text-anchor="middle" fill="#92400e" font-weight="bold" font-size="13">DECISIÓN: ¿Se cumplen las diez condiciones?</text>
+          </svg>
+
+        <div class="caminos-r1">
+          <h3>Camino SÍ y camino NO de R1</h3>
+          <div class="caminos-grid">
+            <div class="camino camino-si">
+              <h4>Camino SÍ</h4>
+              <ul>
+                <li>Solicitar el envío de la respuesta aprobada.</li>
+                <li>Registrar o mostrar el resultado propuesto.</li>
+                <li>FIN.</li>
+              </ul>
+            </div>
+            <div class="camino camino-no">
+              <h4>Camino NO</h4>
+              <ul>
+                <li>No solicitar el envío automático.</li>
+                <li>Identificar qué condición o condiciones fallaron.</li>
+                <li>Aplicar una alternativa explícitamente identificada como decisión de diseño: por ejemplo, derivar a una persona para revisión o dejar el correo pendiente de clasificación.</li>
+                <li>FIN.</li>
+              </ul>
+              <p class="nota">La alternativa del camino NO es una propuesta de diseño del grupo. La sentencia no establece cuál debe ser el tratamiento de cada caso negativo.</p>
+              <p class="nota">Si el correo es sospechoso, no debe recibir una respuesta automática mediante R1. Se puede proponer una revisión de seguridad como alternativa, identificándola expresamente como una decisión de diseño.</p>
+            </div>
+          </div>
+        </div>
+
+        <details class="detalle desplegable" id="detalle-r1">
+          <summary>Desplegable de detalle — R1</summary>
+          <div class="detalle-contenido">
+            <h4>Datos de entrada</h4>
+            <p>Mismos diez datos lógicos listados en la sección de información de entrada.</p>
+            <h4>Las diez condiciones</h4>
+            <ul>
+              <li>Consulta frecuente y clara.</li>
+              <li>Existe respuesta aprobada.</li>
+              <li>No requiere personalización.</li>
+              <li>No contiene reclamo.</li>
+              <li>Cliente no es VIP.</li>
+              <li>Correo no es urgente.</li>
+              <li>Correo no es sospechoso.</li>
+              <li>Existe permiso de respuesta automática.</li>
+              <li>No tiene respuesta enviada.</li>
+              <li>No tiene respuesta en curso.</li>
+            </ul>
+            <h4>Explicación de la conjunción lógica</h4>
+            <p>Todas las condiciones son obligatorias y se evalúan con operador Y. Si cualquiera de ellas falla, la conjunción completa es falsa y no se solicita el envío automático.</p>
+            <h4>Herramientas hipotéticas</h4>
+            <ul>
+              <li>Acceso de lectura a los datos del correo.</li>
+              <li>Clasificador de consultas.</li>
+              <li>Fuente de respuestas aprobadas.</li>
+              <li>Consulta del permiso de respuesta automática.</li>
+              <li>Consulta del historial y estado de respuestas.</li>
+            </ul>
+            <p class="nota">Estas son herramientas propuestas, no integraciones existentes. Qué información se consulta, para qué se usa y qué sucede si falta o no puede verificarse un dato: no se interpreta un dato desconocido como una condición cumplida.</p>
+            <h4>Camino positivo</h4>
+            <p>Si las diez condiciones se cumplen, se solicita el envío de la respuesta aprobada mediante un mecanismo de envío autorizado, y se registra o muestra el resultado propuesto.</p>
+            <h4>Camino negativo</h4>
+            <p>Si alguna condición falla, no se solicita el envío automático, se identifican las condiciones fallidas y se aplica la alternativa de diseño (derivación a persona o correo pendiente).</p>
+            <h4>Casos de prueba</h4>
+            <p>Consultar la sección de casos de prueba (R1-A a R1-K).</p>
+            <h4>Decisiones de diseño</h4>
+            <p>Tratamiento del camino NO (derivar a persona o dejar pendiente), revisión de seguridad para correos sospechosos, y el mecanismo de envío autorizado (no implementado).</p>
+            <h4>Intervención humana</h4>
+            <p>Una persona interviene para revisar los casos que no cumplen R1, especialmente los sospechosos, y para decidir el tratamiento final de los correos pendientes.</p>
+            <h4>Límites de la sentencia</h4>
+            <p>La sentencia solo define solicitar el envío cuando se cumplen las diez condiciones. No define qué hacer cuando falla alguna, ni establece integraciones reales de correo.</p>
+          </div>
+        </details>
+
+        <div class="sentencia-propuesta" id="r1-separacion">
+          <h3>Diferenciación: sentencia vs. propuesta</h3>
+<div class="tabla-wrapper">
+          <table class="tabla-separacion">
+            <thead>
+              <tr><th>Aspecto</th><th>A. Lo que establece la sentencia original</th><th>B. Lo que agrega el diseño del agente</th><th>C. Herramientas hipotéticas</th><th>D. Intervención humana</th><th>E. Casos fuera del alcance</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>R1</td>
+                <td>Solicitar enviar la respuesta aprobada solo si se cumplen las diez condiciones conjuntamente.</td>
+                <td>Secuencia de comprobaciones, camino SÍ / camino NO, registro del resultado, diagrama de flujo.</td>
+                <td>Lectura de correo, clasificador, fuente de respuestas aprobadas, permiso de respuesta automática, historial de respuestas.</td>
+                <td>Revisión de los casos NO (fallas), correos sospechosos y pendientes.</td>
+                <td>Correos que no cumplen alguna condición; no define tratamiento automático para esos casos.</td>
+              </tr>
+            </tbody>
+          </table>
+</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- R2 -->
+    <section class="section regla" id="r2">
+      <div class="container">
+        <div class="regla-header">
+          <h2 id="r2-titulo">R2 — Atención prioritaria con derivación humana</h2>
+          <a href="#propuestas" class="btn btn-small btn-outline">Volver a propuestas</a>
+        </div>
+
+        <div class="sentencia">
+          <h3>Sentencia original R2</h3>
+          <blockquote>
+            “Si un correo no es sospechoso y además es de un cliente VIP o está marcado como urgente, el sistema lo deriva a una persona sin responder automáticamente. La condición «no sospechoso» se aplica a ambas alternativas.”
+          </blockquote>
+          <p class="sentencia-nota">Ambas oraciones y la aclaración final se conservan íntegras.</p>
+        </div>
+
+        <div class="objetivo">
+          <h3>Objetivo de la propuesta R2</h3>
+          <p>Proponer un agente que identifique correos de clientes VIP o marcados como urgentes, siempre que no sean sospechosos, y los derive a una persona sin responder automáticamente.</p>
+        </div>
+
+        <div class="datos-entrada">
+          <h3>Información de entrada</h3>
+          <ul>
+            <li>Si el correo es sospechoso.</li>
+            <li>Si el cliente es VIP.</li>
+            <li>Si el correo está marcado como urgente.</li>
+          </ul>
+          <p class="nota">No se agregan requisitos de respuesta aprobada, permiso de respuesta automática ni historial de respuestas como condiciones obligatorias de R2: no aparecen en su sentencia.</p>
+        </div>
+
+        <div class="condicion-logica">
+          <h3>Condición lógica obligatoria</h3>
+          <p><strong>R2 = NO sospechoso Y (VIP O urgente).</strong></p>
+          <p>Equivalente: <strong>R2 = ¬S ∧ (V ∨ U).</strong></p>
+          <p>La condición “no sospechoso” se aplica tanto a VIP como a urgente.</p>
+          <div class="tabla-resultados">
+            <table>
+              <thead>
+                <tr><th>Sospechoso</th><th>VIP</th><th>Urgente</th><th>Resultado esperado</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>No</td><td>Sí</td><td>No</td><td>Derivar a una persona.</td></tr>
+                <tr><td>No</td><td>No</td><td>Sí</td><td>Derivar a una persona.</td></tr>
+                <tr><td>No</td><td>Sí</td><td>Sí</td><td>Derivar a una persona.</td></tr>
+                <tr><td>No</td><td>No</td><td>No</td><td>R2 no se activa.</td></tr>
+                <tr><td>Sí</td><td>Sí</td><td>No</td><td>R2 no se activa; no se responde automáticamente por esta propuesta.</td></tr>
+                <tr><td>Sí</td><td>No</td><td>Sí</td><td>R2 no se activa; no se responde automáticamente por esta propuesta.</td></tr>
+                <tr><td>Sí</td><td>Sí</td><td>Sí</td><td>R2 no se activa; no se responde automáticamente por esta propuesta.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="nota">No permitir que la condición VIP o urgente anule la condición de seguridad.</p>
+        </div>
+
+        <div class="diagrama-wrapper" id="diagrama-r2">
+          <h3>Diagrama gráfico de R2</h3>
+
+          
+        <svg class="diagrama" id="svg-r2" viewBox="0 0 1500 850"        role="img" aria-labelledby="titulo-r2 descripcion-r2"       xmlns="http://www.w3.org/2000/svg">
+  <title id="titulo-r2">Diagrama R2 — Atención prioritaria con derivación humana</title>
+  <desc id="descripcion-r2">El correo se evalúa primero por sospecha. Si es sospechoso, R2 no se activa y se propone revisión de seguridad como decisión de diseño. Si no es sospechoso, se evalúa si es VIP o urgente. Si cumple alguna de esas condiciones, se deriva a una persona sin responder automáticamente. Si no cumple ninguna, R2 no se activa y otro proceso determina el tratamiento.</desc>
+
+  <defs>
+    <marker id="arrow-r2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1f3a5f" />
+    </marker>
+    <style>
+      #svg-r2 text { font-family: Arial, Helvetica, sans-serif; }
+      #svg-r2 .flow { fill: none; stroke: #1f3a5f; stroke-width: 2; marker-end: url(#arrow-r2); }
+      #svg-r2 .node { fill: #fff; stroke: #1f3a5f; stroke-width: 2; }
+      #svg-r2 .info { fill: #eef4fb; stroke: #1f3a5f; stroke-width: 2; }
+      #svg-r2 .decision { fill: #fff7ed; stroke: #b45309; stroke-width: 2; }
+      #svg-r2 .end { fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 2; }
+      #svg-r2 .txt { fill: #1f3a5f; font-size: 16px; text-anchor: middle; }
+      #svg-r2 .small { fill: #1f3a5f; font-size: 14px; text-anchor: middle; }
+      #svg-r2 .decision-txt { fill: #92400e; font-size: 16px; font-weight: bold; text-anchor: middle; }
+      #svg-r2 .branch { fill: #1f3a5f; font-size: 15px; font-weight: bold; text-anchor: middle; }
+      #svg-r2 .end-txt { fill: #fff; font-size: 14px; text-anchor: middle; }
+      #svg-r2 .note { fill: #6b7280; font-size: 14px; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- Flujo principal -->
+  <rect class="node" x="680" y="20" width="140" height="42" rx="7" />
+  <text class="txt" x="750" y="46" font-weight="bold">INICIO</text>
+  <path class="flow" d="M750 62 V88" />
+
+  <rect class="info" x="620" y="90" width="260" height="48" rx="7" />
+  <text class="txt" x="750" y="119">Llega un correo.</text>
+  <path class="flow" d="M750 138 V164" />
+
+  <rect class="info" x="450" y="168" width="600" height="54" rx="7" />
+  <text class="txt" x="750" y="190">El agente consulta la clasificación de seguridad</text>
+  <text class="txt" x="750" y="210">y los indicadores VIP y urgente.</text>
+  <path class="flow" d="M750 222 V246" />
+
+  <polygon class="decision" points="750,246 920,296 750,346 580,296" />
+  <text class="decision-txt" x="750" y="291">¿El correo es</text>
+  <text class="decision-txt" x="750" y="311">sospechoso?</text>
+
+  <!-- SÍ: correo sospechoso -->
+  <path class="flow" d="M580 296 H300 V332" />
+  <text class="branch" x="440" y="284">SÍ</text>
+
+  <rect class="node" x="80" y="336" width="440" height="58" rx="7" />
+  <text class="txt" x="300" y="360">R2 no se activa:</text>
+  <text class="txt" x="300" y="380">no se cumple la condición «no sospechoso».</text>
+  <path class="flow" d="M300 394 V420" />
+
+  <rect class="node" x="80" y="424" width="440" height="58" rx="7" />
+  <text class="txt" x="300" y="448">No responder automáticamente</text>
+  <text class="small" x="300" y="468">por esta propuesta.</text>
+  <path class="flow" d="M300 482 V508" />
+
+  <rect class="node" x="80" y="512" width="440" height="72" rx="7" />
+  <text class="txt" x="300" y="536">Proponer revisión de seguridad</text>
+  <text class="txt" x="300" y="557">como decisión adicional de diseño.</text>
+  <path class="flow" d="M300 584 V614" />
+
+  <rect class="end" x="260" y="618" width="80" height="40" rx="7" />
+  <text class="end-txt" x="300" y="643">FIN</text>
+
+  <!-- NO: correo no sospechoso -->
+  <path class="flow" d="M920 296 H1100 V326" />
+  <text class="branch" x="1010" y="284">NO</text>
+
+  <polygon class="decision" points="1100,326 1235,376 1100,426 965,376" />
+  <text class="decision-txt" x="1100" y="371">¿Es VIP</text>
+  <text class="decision-txt" x="1100" y="391">o urgente?</text>
+
+  <!-- SÍ: es VIP o urgente -->
+  <path class="flow" d="M1235 376 H1340 V424" />
+  <text class="branch" x="1290" y="363">SÍ</text>
+
+  <rect class="info" x="1190" y="428" width="300" height="58" rx="7" />
+  <text class="txt" x="1340" y="452" font-weight="bold">Derivar a una persona</text>
+  <text class="small" x="1340" y="472">para atención humana.</text>
+  <path class="flow" d="M1340 486 V512" />
+
+  <rect class="node" x="1190" y="516" width="300" height="58" rx="7" />
+  <text class="txt" x="1340" y="540">No responder</text>
+  <text class="txt" x="1340" y="560">automáticamente.</text>
+  <path class="flow" d="M1340 574 V600" />
+
+  <rect class="node" x="1190" y="604" width="300" height="58" rx="7" />
+  <text class="txt" x="1340" y="628">Informar el resultado</text>
+  <text class="txt" x="1340" y="648">de la derivación propuesta.</text>
+  <path class="flow" d="M1340 662 V690" />
+
+  <rect class="end" x="1290" y="694" width="100" height="40" rx="7" />
+  <text class="end-txt" x="1340" y="719">FIN</text>
+
+  <!-- NO: no es VIP ni urgente -->
+  <path class="flow" d="M965 376 H810 V424" />
+  <text class="branch" x="890" y="363">NO</text>
+
+  <rect class="node" x="650" y="428" width="320" height="58" rx="7" />
+  <text class="txt" x="810" y="452">R2 no se activa.</text>
+  <text class="small" x="810" y="472">No cumple VIP ni urgente.</text>
+  <path class="flow" d="M810 486 V512" />
+
+  <rect class="node" x="650" y="516" width="320" height="72" rx="7" />
+  <text class="txt" x="810" y="540">No realizar la derivación</text>
+  <text class="txt" x="810" y="560">por esta regla.</text>
+  <text class="small" x="810" y="578">Otro proceso define el tratamiento.</text>
+  <path class="flow" d="M810 588 V618" />
+
+  <rect class="end" x="770" y="622" width="80" height="40" rx="7" />
+  <text class="end-txt" x="810" y="647">FIN</text>
+
+  <text class="note" x="50" y="795">Nota: la revisión de seguridad, la notificación y el tratamiento de otros correos son decisiones de diseño adicionales, no consecuencias literales de la sentencia.</text>
+        </svg>
+        
+        <details class="detalle desplegable" id="detalle-r2">
+          <summary>Desplegable de detalle — R2</summary>
+          <div class="detalle-contenido">
+            <h4>Datos de entrada</h4>
+            <ul>
+              <li>Si el correo es sospechoso.</li>
+              <li>Si el cliente es VIP.</li>
+              <li>Si el correo está marcado como urgente.</li>
+            </ul>
+            <h4>Explicación de AND y OR</h4>
+            <p>El operador Y (AND) une “no sospechoso” con la agrupación entre paréntesis. El operador O (OR) une VIP y urgente dentro de esa agrupación. El resultado es verdadero solo cuando no es sospechoso Y al menos una de las dos (VIP u urgente) es verdadera.</p>
+            <h4>Aplicación de la condición de seguridad a ambas alternativas</h4>
+            <p>“No sospechoso” se aplica tanto al caso VIP como al caso urgente. Si el correo es sospechoso, R2 no se activa aunque sea VIP o urgente.</p>
+            <h4>Herramientas hipotéticas</h4>
+            <ul>
+              <li>Acceso de lectura al correo.</li>
+              <li>Fuente de clasificación de seguridad.</li>
+              <li>Consulta del indicador VIP.</li>
+              <li>Consulta del indicador de urgencia.</li>
+              <li>Bandeja o cola de atención humana.</li>
+            </ul>
+            <p class="nota">La derivación debe incluir el correo y la información necesaria para que la persona lo atienda. No se conectan herramientas reales.</p>
+            <h4>Camino positivo</h4>
+            <p>Si no es sospechoso Y (es VIP O es urgente), se deriva el correo a una persona, no se responde automáticamente y se informa el resultado de la derivación propuesta.</p>
+            <h4>Camino negativo</h4>
+            <p>Si es sospechoso, no se activa R2 y no se responde automáticamente por esta propuesta. Si no es sospechoso pero no es VIP ni urgente, R2 no se activa y otro proceso determina el tratamiento.</p>
+            <h4>Casos de prueba</h4>
+            <p>Consultar la sección de casos de prueba (R2-A a R2-G).</p>
+            <h4>Decisiones de diseño</h4>
+            <p>Revisión de seguridad cuando el estado es desconocido, notificación de derivación y tratamiento de correos fuera de R2.</p>
+            <h4>Intervención humana</h4>
+            <p>Una persona atiende los correos derivados por R2 desde la bandeja o cola de atención humana.</p>
+            <h4>Límites de la sentencia</h4>
+            <p>La sentencia define la derivación humana para correos no sospechosos que sean VIP o urgentes. No define el tratamiento de correos sospechosos ni de los que no sean VIP ni urgentes.</p>
+          </div>
+        </details>
+
+        <div class="sentencia-propuesta" id="r2-separacion">
+          <h3>Diferenciación: sentencia vs. propuesta</h3>
+<div class="tabla-wrapper">
+          <table class="tabla-separacion">
+            <thead>
+              <tr><th>Aspecto</th><th>A. Lo que establece la sentencia original</th><th>B. Lo que agrega el diseño del agente</th><th>C. Herramientas hipotéticas</th><th>D. Intervención humana</th><th>E. Casos fuera del alcance</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>R2</td>
+                <td>Derivar a una persona sin responder automáticamente si no es sospechoso Y (es VIP O es urgente).</td>
+                <td>Consulta de indicadores, diagrama de flujo, caminos SÍ / NO, informar resultado de derivación.</td>
+                <td>Lectura de correo, clasificación de seguridad, indicador VIP, indicador de urgencia, cola de atención humana.</td>
+                <td>Persona atiende el correo derivado desde la bandeja de atención humana.</td>
+                <td>Correos sospechosos (incluso si son VIP o urgentes) y correos que no son VIP ni urgentes.</td>
+              </tr>
+            </tbody>
+          </table>
+</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CASOS DE PRUEBA -->
+    <section class="section casos-prueba" id="casos-prueba">
+      <div class="container">
+        <h2 id="casos-prueba-titulo">Casos de prueba y validación</h2>
+        <p class="section-intro">Los siguientes casos muestran las condiciones de entrada y el resultado esperado. Son pruebas de lógica sobre los criterios de aceptación, no pruebas de una integración real.</p>
+
+        <div class="pruebas-grid">
+          <div class="prueba-columna">
+            <h3>R1 — Pruebas de lógica</h3>
+<div class="tabla-wrapper">
+            <table class="tabla-prueba">
+              <thead>
+                <tr><th>Caso</th><th>Condición de entrada</th><th>Resultado esperado</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>R1-A</td><td>Las diez condiciones se cumplen.</td><td>Se solicita enviar la respuesta aprobada.</td></tr>
+                <tr><td>R1-B</td><td>El correo no es una consulta frecuente clara.</td><td>No se solicita el envío automático.</td></tr>
+                <tr><td>R1-C</td><td>No existe una respuesta aprobada.</td><td>No se solicita el envío automático.</td></tr>
+                <tr><td>R1-D</td><td>El correo requiere personalización.</td><td>No se solicita el envío automático.</td></tr>
+                <tr><td>R1-E</td><td>El correo contiene un reclamo.</td><td>No se solicita el envío automático.</td></tr>
+                <tr><td>R1-F</td><td>El cliente es VIP.</td><td>No se solicita el envío automático por R1.</td></tr>
+                <tr><td>R1-G</td><td>El correo está marcado como urgente.</td><td>No se solicita el envío automático por R1.</td></tr>
+                <tr><td>R1-H</td><td>El correo es sospechoso.</td><td>No se solicita el envío automático.</td></tr>
+                <tr><td>R1-I</td><td>No existe permiso de respuesta automática.</td><td>No se solicita el envío automático.</td></tr>
+                <tr><td>R1-J</td><td>Ya se envió una respuesta.</td><td>No se solicita el envío automático.</td></tr>
+                <tr><td>R1-K</td><td>Existe una respuesta en curso.</td><td>No se solicita el envío automático.</td></tr>
+              </tbody>
+            </table>
+</div>
+          </div>
+
+          <div class="prueba-columna">
+            <h3>R2 — Pruebas de lógica</h3>
+<div class="tabla-wrapper">
+            <table class="tabla-prueba">
+              <thead>
+                <tr><th>Caso</th><th>Condición de entrada</th><th>Resultado esperado</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>R2-A</td><td>No sospechoso, VIP y no urgente.</td><td>Derivación humana sin respuesta automática.</td></tr>
+                <tr><td>R2-B</td><td>No sospechoso, no VIP y urgente.</td><td>Derivación humana sin respuesta automática.</td></tr>
+                <tr><td>R2-C</td><td>No sospechoso, VIP y urgente.</td><td>Derivación humana sin respuesta automática.</td></tr>
+                <tr><td>R2-D</td><td>No sospechoso, no VIP y no urgente.</td><td>R2 no se activa.</td></tr>
+                <tr><td>R2-E</td><td>Sospechoso, VIP y no urgente.</td><td>R2 no se activa; no se responde automáticamente por esta propuesta.</td></tr>
+                <tr><td>R2-F</td><td>Sospechoso, no VIP y urgente.</td><td>R2 no se activa; no se responde automáticamente por esta propuesta.</td></tr>
+                <tr><td>R2-G</td><td>Sospechoso, VIP y urgente.</td><td>R2 no se activa; no se responde automáticamente por esta propuesta.</td></tr>
+              </tbody>
+            </table>
+</div>
+          </div>
+        </div>
+
+        <div class="simulador">
+          <h3>Simulador demostrativo (resultado local ficticio)</h3>
+          <p>Seleccioná los valores de entrada para ver qué haría cada regla según su lógica. Los resultados son locales y ficticios; no envían correos reales.</p>
+          <div class="form-simulador">
+            <fieldset>
+              <legend>R1 — Evaluar las diez condiciones</legend>
+              <div class="grupo-check">
+                <label><input type="checkbox" name="r1" value="consulta"> Consulta frecuente y clara</label>
+                <label><input type="checkbox" name="r1" value="respuesta_aprobada"> Existe respuesta aprobada</label>
+                <label><input type="checkbox" name="r1" value="personalizacion"> Requiere personalización (negativa)</label>
+                <label><input type="checkbox" name="r1" value="reclamo"> Contiene reclamo (negativa)</label>
+                <label><input type="checkbox" name="r1" value="vip"> Cliente VIP (negativa)</label>
+                <label><input type="checkbox" name="r1" value="urgente"> Es urgente (negativa)</label>
+                <label><input type="checkbox" name="r1" value="sospechoso"> Es sospechoso (negativa)</label>
+                <label><input type="checkbox" name="r1" value="permiso"> Existe permiso de respuesta automática</label>
+                <label><input type="checkbox" name="r1" value="enviada"> Ya tiene respuesta enviada (negativa)</label>
+                <label><input type="checkbox" name="r1" value="en_curso"> Ya tiene respuesta en curso (negativa)</label>
+              </div>
+              <button type="button" class="btn btn-primary btn-small" onclick="evaluarR1()">Evaluar R1</button>
+              <p id="resultado-r1" class="resultado"></p>
+            </fieldset>
+
+            <fieldset>
+              <legend>R2 — Seguridad, VIP y urgente</legend>
+              <div class="grupo-check">
+                <label><input type="checkbox" name="r2" value="sospechoso"> Es sospechoso (bloquea R2)</label>
+                <label><input type="checkbox" name="r2" value="vip"> Cliente VIP</label>
+                <label><input type="checkbox" name="r2" value="urgente"> Es urgente</label>
+              </div>
+              <button type="button" class="btn btn-primary btn-small" onclick="evaluarR2()">Evaluar R2</button>
+              <p id="resultado-r2" class="resultado"></p>
+            </fieldset>
+          </div>
+          <p class="nota">Nota: los campos marcados como (negativa) representan condiciones que deben estar <strong>sin marcar</strong> para que R1 considere esa condición cumplida.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELACION -->
+    <section class="section relacion" id="relacion">
+      <div class="container">
+        <h2 id="relacion-titulo">Relación entre R1 y R2</h2>
+        <div class="grid grid-two">
+          <div>
+            <p>Las dos reglas tienen objetivos distintos y complementarios:</p>
+            <ul>
+              <li><strong>R1</strong> prioriza el envío controlado de respuestas aprobadas para consultas frecuentes que cumplen todas las condiciones.</li>
+              <li><strong>R2</strong> prioriza la atención humana de correos no sospechosos que pertenezcan a clientes VIP o estén marcados como urgentes.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="alerta">
+              <p><strong>Importante:</strong> un correo VIP o urgente no puede cumplir R1, porque R1 exige que no sea VIP y que no sea urgente.</p>
+              <p>La regla R2 no define el tratamiento de correos sospechosos ni el de los correos que no sean VIP ni urgentes. No se inventa una consecuencia obligatoria para esos casos.</p>
+            </div>
+          </div>
+        </div>
+        <p class="nota">Si se muestra una relación visual entre ambos flujos, se aclara como una vista conceptual del sistema propuesto y no como una tercera sentencia.</p>
+      </div>
+    </section>
+
+    <!-- CONCLUSIONES -->
+    <section class="section conclusiones" id="conclusiones">
+      <div class="container">
+        <h2>Conclusiones y límites de la propuesta</h2>
+        <div class="grid grid-two">
+          <div>
+            <h3>Conclusiones</h3>
+            <ul>
+              <li>R1 permite solicitar respuestas aprobadas solo cuando se verifican las diez condiciones conjuntamente.</li>
+              <li>R2 garantiza que correos VIP o urgentes no sospechosos reciban atención humana sin respuesta automática.</li>
+              <li>Ambas reglas son complementarias y no se superponen en su objetivo principal.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Límites</h3>
+            <ul>
+              <li>Los agentes de correo no existen ni se ejecutan en esta landing.</li>
+              <li>No hay llamadas a APIs, backend ni integración con servicios de correo.</li>
+              <li>Las herramientas mencionadas son hipotéticas y no están implementadas.</li>
+              <li>El simulador muestra resultados locales ficticios únicamente.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- EQUIPO -->
+  <footer class="site-footer" id="equipo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/images/logo.webp" alt="Logo de AutoMail AI" class="logo-footer">
+          <p><strong>Nombre de la startup:</strong> AutoMail AI</p>
+          <p><strong>Bloque:</strong> S10-A — Respuesta y atención humana</p>
+          <p><strong>Institución:</strong> IFTS 16</p>
+        </div>
+        <div class="footer-col">
+          <h3>Datos del trabajo</h3>
+          <p><strong>Nombre del grupo:</strong> <span class="pendiente">[PENDIENTE: el equipo debe completar]</span></p>
+          <p><strong>Integrantes:</strong> <span class="pendiente">[PENDIENTE: el equipo debe completar]</span></p>
+          <p><strong>Aporte de cada integrante:</strong> <span class="pendiente">[PENDIENTE: el equipo debe completar]</span></p>
+          <p><strong>Herramientas de IA utilizadas:</strong> <span class="pendiente">[PENDIENTE: el equipo debe completar]</span></p>
+        </div>
+        <div class="footer-col">
+          <h3>Documentación</h3>
+          <ul>
+            <li><a href="#r1">Sentencia y diagrama R1</a></li>
+            <li><a href="#r2">Sentencia y diagrama R2</a></li>
+            <li><a href="#casos-prueba">Casos de prueba</a></li>
+            <li><a href="README.md">README del proyecto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-nota">
+        <p>Los datos marcados como pendiente deben ser completados por el equipo. No se inventa información personal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
+
