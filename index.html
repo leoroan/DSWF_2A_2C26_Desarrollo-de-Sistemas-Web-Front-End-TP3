@@ -144,84 +144,103 @@ Y no tiene respuesta en curso.</pre>
         <div class="diagrama-wrapper" id="diagrama-r1">
           <h3>Diagrama gráfico de R1</h3>
 
-          <svg class="diagrama" id="svg-r1" viewBox="0 0 900 930" aria-label="Diagrama de decisión de R1: flujo desde INICIO hasta FIN, con camino SÍ y camino NO" role="img">
-            <title>Diagrama R1 — Respuesta aprobada y envío controlado</title>
-            <desc>Secuencia: INICIO → llega correo → consultar 10 condiciones → decisión conjunta → camino SÍ solicita envío y FIN; camino NO no solicita envío, identifica condición fallida, aplica decisión de diseño (derivar a persona o dejar pendiente) y FIN.</desc>
+          <svg class="diagrama" id="svg-r1" viewBox="0 0 1400 1080" role="img" aria-labelledby="titulo-r1 descripcion-r1" xmlns="http://www.w3.org/2000/svg">
+            <title id="titulo-r1">Diagrama R1 — Respuesta aprobada y envío controlado</title>
+            <desc id="descripcion-r1">El agente recibe un correo y verifica diez condiciones. Si todas están confirmadas y se cumplen, solicita el envío de la respuesta aprobada y registra la solicitud. Si alguna falla o no puede verificarse, no solicita el envío, identifica el motivo y propone revisión humana o dejar el caso pendiente. Los destinos negativos y la revisión de seguridad son decisiones de diseño; un dato desconocido nunca se considera cumplido.</desc>
             <defs>
-              <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-                <path d="M0,0 L0,6 L9,3 z" fill="#1f3a5f"/>
+              <marker id="arrow-r1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                <path d="M0,0 L0,6 L8,3 z" fill="#1f3a5f" />
               </marker>
-              <marker id="arrow-nodo" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
-                <path d="M0,0 L0,5 L6,2.5 z" fill="#1f3a5f"/>
-              </marker>
+              <style>
+                #svg-r1 text { font-family: Arial, Helvetica, sans-serif; }
+                #svg-r1 .flow { fill: none; stroke: #1f3a5f; stroke-width: 2; marker-end: url(#arrow-r1); }
+                #svg-r1 .node { fill: #fff; stroke: #1f3a5f; stroke-width: 2; }
+                #svg-r1 .info { fill: #eef4fb; stroke: #1f3a5f; stroke-width: 2; }
+                #svg-r1 .decision { fill: #fff7ed; stroke: #b45309; stroke-width: 2; }
+                #svg-r1 .end { fill: #1f3a5f; stroke: #1f3a5f; stroke-width: 2; }
+                #svg-r1 .txt { fill: #1f3a5f; font-size: 17px; text-anchor: middle; }
+                #svg-r1 .small { fill: #1f3a5f; font-size: 15px; text-anchor: middle; }
+                #svg-r1 .decision-txt { fill: #92400e; font-size: 17px; font-weight: bold; text-anchor: middle; }
+                #svg-r1 .branch { fill: #1f3a5f; font-size: 16px; font-weight: bold; text-anchor: middle; }
+                #svg-r1 .end-txt { fill: #fff; font-size: 15px; text-anchor: middle; }
+                #svg-r1 .note { fill: #4b5563; font-size: 14px; }
+                #svg-r1 .data-title { fill: #1f3a5f; font-size: 17px; font-weight: bold; }
+                              #svg-r1 .data { fill: #1f3a5f; font-size: 14px; }
+              </style>
             </defs>
 
-            <!-- Nodos y flechas R1 -->
-            <rect x="380" y="20" width="140" height="40" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-            <text x="450" y="42" text-anchor="middle" fill="#1f3a5f" font-weight="bold" font-size="14">INICIO</text>
+            <rect class="node" x="620" y="20" width="160" height="48" rx="7" />
+            <text class="txt" x="700" y="50" font-weight="bold">INICIO</text>
+            <path class="flow" d="M700 68 V98" />
 
-            <line x1="450" y1="60" x2="450" y2="95" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-            <rect x="320" y="95" width="260" height="44" rx="6" fill="#eef4fb" stroke="#1f3a5f" stroke-width="2"/>
-            <text x="450" y="119" text-anchor="middle" fill="#1f3a5f" font-size="13">Llega un correo.</text>
+            <rect class="info" x="570" y="102" width="260" height="52" rx="7" />
+            <text class="txt" x="700" y="134">Llega un correo.</text>
+            <path class="flow" d="M700 154 V176" />
 
-            <line x1="450" y1="139" x2="450" y2="174" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-            <rect x="200" y="174" width="500" height="60" rx="6" fill="#eef4fb" stroke="#1f3a5f" stroke-width="2"/>
-            <text x="450" y="193" text-anchor="middle" fill="#1f3a5f" font-size="12">El agente obtiene o consulta los datos</text>
-            <text x="450" y="209" text-anchor="middle" fill="#1f3a5f" font-size="12">necesarios para evaluar las diez condiciones.</text>
+            <rect class="info" x="320" y="180" width="760" height="150" rx="7" />
+            <text class="data-title" x="350" y="207">El agente obtiene o consulta los datos para verificar:</text>
+            <text class="data" x="350" y="235">1. Consulta frecuente y clara</text>
+            <text class="data" x="350" y="255">2. Existe respuesta aprobada</text>
+            <text class="data" x="350" y="275">3. No requiere personalización</text>
+            <text class="data" x="350" y="295">4. No contiene un reclamo</text>
+            <text class="data" x="350" y="315">5. Cliente no VIP</text>
+            <text class="data" x="720" y="235">6. No es urgente</text>
+            <text class="data" x="720" y="255">7. No es sospechoso</text>
+            <text class="data" x="720" y="275">8. Tiene permiso de respuesta automática</text>
+            <text class="data" x="720" y="295">9. Sin respuesta enviada</text>
+            <text class="data" x="720" y="315">10. Sin respuesta en curso</text>
+            <path class="flow" d="M700 330 V346" />
 
-            <g class="condicion">
-              <line x1="450" y1="234" x2="450" y2="253" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-              <rect x="220" y="253" width="460" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-              <text x="450" y="273" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que sea una consulta frecuente y clara.</text>
-            </g>
-            <g class="condicion">
-              <line x1="450" y1="291" x2="450" y2="326" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-              <rect x="240" y="326" width="420" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-              <text x="450" y="346" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que exista una respuesta aprobada.</text>
-            </g>
-            <g class="condicion">
-              <line x1="450" y1="364" x2="450" y2="399" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-              <rect x="230" y="399" width="440" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-              <text x="450" y="419" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que no requiera personalización.</text>
-            </g>
-            <g class="condicion">
-              <line x1="450" y1="437" x2="450" y2="472" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-              <rect x="250" y="472" width="400" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-              <text x="450" y="492" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que no contenga un reclamo.</text>
-            </g>
-            <g class="condicion">
-              <line x1="450" y1="510" x2="450" y2="545" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-              <rect x="260" y="545" width="380" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-              <text x="450" y="565" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que el cliente no sea VIP.</text>
-            </g>
-            <g class="condicion">
-              <line x1="450" y1="583" x2="450" y2="618" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-              <rect x="240" y="618" width="420" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-              <text x="450" y="638" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que el correo no sea urgente.</text>
-            </g>
-            <g class="condicion">
-              <line x1="450" y1="656" x2="450" y2="691" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-              <rect x="250" y="691" width="400" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-              <text x="450" y="711" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que no sea sospechoso.</text>
-            </g>
-            <g class="condicion">
-              <line x1="450" y1="729" x2="450" y2="764" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-              <rect x="230" y="764" width="440" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-              <text x="450" y="784" text-anchor="middle" fill="#1f3a5f" font-size="12">Comprueba que exista permiso de respuesta automática.</text>
-            </g>
+            <polygon class="decision" points="700,350 960,420 700,490 440,420" />
+            <text class="decision-txt" x="700" y="414">¿Se verifican y cumplen</text>
+            <text class="decision-txt" x="700" y="438">las diez condiciones?</text>
 
-            <!-- Rama derecha: permiso OK -> respuesta enviada / en curso -->
-            <line x1="670" y1="783" x2="850" y2="783" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-            <rect x="720" y="783" width="160" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-            <text x="800" y="803" text-anchor="middle" fill="#1f3a5f" font-size="11">Respuesta enviada</text>
-            <line x1="800" y1="821" x2="800" y2="856" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-            <rect x="720" y="856" width="160" height="38" rx="6" fill="#ffffff" stroke="#1f3a5f" stroke-width="2"/>
-            <text x="800" y="876" text-anchor="middle" fill="#1f3a5f" font-size="11">Respuesta en curso</text>
+            <path class="flow" d="M960 420 H1170 V512" />
+            <text class="branch" x="1060" y="405">SÍ</text>
+            <rect class="info" x="1010" y="520" width="320" height="72" rx="7" />
+            <text class="txt" x="1170" y="550" font-weight="bold">Solicitar el envío de</text>
+            <text class="txt" x="1170" y="574">la respuesta aprobada.</text>
+            <path class="flow" d="M1170 592 V612" />
+            <rect class="node" x="1010" y="620" width="320" height="76" rx="7" />
+            <text class="txt" x="1170" y="651">Registrar la solicitud;</text>
+            <text class="small" x="1170" y="675">no afirmar que ya se envió.</text>
+            <path class="flow" d="M1170 696 V732" />
+            <rect class="end" x="1125" y="738" width="90" height="44" rx="7" />
+            <text class="end-txt" x="1170" y="766">FIN</text>
 
-            <!-- Decisión -->
-            <line x1="450" y1="802" x2="450" y2="837" stroke="#1f3a5f" stroke-width="2" marker-end="url(#arrow)"/>
-            <rect x="300" y="837" width="300" height="44" rx="6" fill="#fff7ed" stroke="#b45309" stroke-width="2"/>
-            <text x="450" y="861" text-anchor="middle" fill="#92400e" font-weight="bold" font-size="13">DECISIÓN: ¿Se cumplen las diez condiciones?</text>
+            <path class="flow" d="M440 420 H250 V512" />
+            <text class="branch" x="340" y="405">NO</text>
+            <rect class="node" x="40" y="520" width="420" height="64" rx="7" />
+            <text class="txt" x="250" y="559">No solicitar el envío automático.</text>
+            <path class="flow" d="M250 584 V612" />
+            <rect class="node" x="40" y="620" width="420" height="70" rx="7" />
+            <text class="txt" x="250" y="650">Identificar las condiciones fallidas</text>
+            <text class="small" x="250" y="674">o los datos que no pudieron verificarse.</text>
+            <path class="flow" d="M250 690 V716" />
+
+            <polygon class="decision" points="250,720 430,785 250,850 70,785" />
+            <text class="decision-txt" x="250" y="779">¿Sospechoso o hay</text>
+            <text class="decision-txt" x="250" y="801">datos sin verificar?</text>
+
+            <path class="flow" d="M70 785 H15 V874" />
+            <text class="branch" x="34" y="770">SÍ</text>
+            <rect class="info" x="0" y="882" width="250" height="72" rx="7" />
+            <text class="small" x="125" y="910">Revisión humana prioritaria:</text>
+            <text class="small" x="125" y="933">seguridad o verificar datos.</text>
+            <path class="flow" d="M125 954 V978" />
+            <rect class="end" x="80" y="984" width="90" height="42" rx="7" />
+            <text class="end-txt" x="125" y="1011">FIN</text>
+
+            <path class="flow" d="M430 785 H545 V874" />
+            <text class="branch" x="505" y="770">NO</text>
+            <rect class="info" x="420" y="882" width="250" height="72" rx="7" />
+            <text class="small" x="545" y="910">Revisión humana o dejar</text>
+            <text class="small" x="545" y="933">pendiente de clasificación.</text>
+            <path class="flow" d="M545 954 V978" />
+            <rect class="end" x="500" y="984" width="90" height="42" rx="7" />
+            <text class="end-txt" x="545" y="1011">FIN</text>
+
+            <text class="note" x="700" y="1060" text-anchor="middle">El tratamiento del camino NO y la revisión de seguridad son decisiones de diseño; un dato desconocido no cuenta como cumplido.</text>
           </svg>
 
         <div class="caminos-r1">

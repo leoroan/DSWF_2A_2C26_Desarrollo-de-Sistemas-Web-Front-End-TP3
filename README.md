@@ -89,6 +89,7 @@ VS Code con Cline como agente de desarrollo utilizado para la codificación, cor
 ## 11. Modelo de IA seleccionado
 
 Modelos usados: "Claude 3.5 Sonnet" y "GPT-4o"
+Auditado por : GPT-6 Luna
 
 ## 12. Para qué se utilizó cada herramienta y modelo
 
@@ -146,7 +147,8 @@ El sitio es estático y puede publicarse en cualquier servicio de hosting estát
 
 ## 18. URL de la landing publicada
 
-[PENDIENTE] to be anounced.
+[en gh-Pages](http://myselfproductions.me/DSWF_2A_2C26_Desarrollo-de-Sistemas-Web-Front-End-TP3/)
+[en Vercel](https://isft29dswftp3.vercel.app/)
 
 ## 19. Proceso de Trabajo y Construcción Agéntica ("Cómo lo hicimos")
 
