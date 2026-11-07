@@ -21,7 +21,35 @@ Grupo #19 -NameLess-
 
 ## 5. Integrantes y aporte concreto de cada integrante
 
-- **Leandro Maselli** — github.com/leoroan: Análisis y desarrollo de las reglas de automatización R1 y R2, diseño de la landing page, corrección de codificación de caracteres y documentación del proyecto.
+### Leandro Maselli
+
+- **GitHub:** `https://myselfproductions.me/DSWF_2A_2C26_Desarrollo-de-Sistemas-Web-Front-End/`
+- **Ciudad:** La Plata, Argentina
+- **Aporte concreto:** Me encargué de armar las instrucciones y los prompts para el agente de programación, y de supervisar cómo quedaba la estructura base de la landing.
+
+### Javier Canteros
+
+- **GitHub:** `https://zirocool3.github.io/pfo1-CanterosJavier/`
+- **Ciudad:** Resistencia, Chaco, Argentina
+- **Aporte concreto:** Me ocupé de analizar y desarmar las dos sentencias que nos tocaron (qué datos hacían falta, las condiciones y las consecuencias) y de escribir los textos de los desplegables.
+
+### Maximiliano Quinteros
+
+- **GitHub:** `https://github.com/Maxi22xT/Maximiliano-Quinteros-Front-End-IFST-29`
+- **Ciudad:** Córdoba, Argentina
+- **Aporte concreto:** Hice el diseño y los gráficos de los dos diagramas de flujo agéntico (cómo van los datos, las decisiones, las acciones y dónde interviene la persona).
+
+### Damián Pelisare
+
+- **GitHub:** `https://github.com/Damian-E/ifts_frontEnd`
+- **Ciudad:** Buenos Aires, Argentina
+- **Aporte concreto:** Probé la landing en desktop, revisé que anduvieran la navegación y los desplegables, y le pasé las correcciones al agente de IA.
+
+### Nidia Elías
+
+- **GitHub:** `https://nidia-elias.github.io/portfolio/`
+- **Ciudad:** Mar de Ajo, La Costa, Argentina
+- **Aporte concreto:** Escribí la documentación en el README (las herramientas, aplicaciones y modelos de IA que usamos) y revisé que funcionaran los enlaces del repositorio y de la landing.
 
 ## 6. Descripción de R1
 
@@ -60,7 +88,7 @@ VS Code con Cline como agente de desarrollo utilizado para la codificación, cor
 
 ## 11. Modelo de IA seleccionado
 
-Modelos de Nvidia: "Nemotron" 3.5 y flash. (freemium)
+Modelos usados: "Claude 3.5 Sonnet" y "GPT-4o"
 
 ## 12. Para qué se utilizó cada herramienta y modelo
 
@@ -114,8 +142,69 @@ El sitio es estático y puede publicarse en cualquier servicio de hosting estát
 
 ## 17. URL del repositorio
 
-[PENDIENTE: Proximamente]
+[URL del repo Grupo #19](https://github.com/leoroan/DSWF_2A_2C26_Desarrollo-de-Sistemas-Web-Front-End-TP3)
 
 ## 18. URL de la landing publicada
 
 [PENDIENTE] to be anounced.
+
+## 19. Proceso de Trabajo y Construcción Agéntica ("Cómo lo hicimos")
+
+Para desarrollar este TP3 organizamos nuestro trabajo en etapas iterativas, coordinando las decisiones de diseño y lógica en equipo mientras guiamos al agente de programación para la generación del código sin modificarlo manualmente [3, 6, 7].
+
+---
+
+### 1. Despiece de sentencias y definición de propuestas (Pasos 3 y 4)
+
+Lo primero que hicimos fue reunirnos a analizar el bloque de sentencias que nos asignó el docente [1, 8]. Para no perder la lógica proposicional original de las reglas, armamos dos fichas breves en las que desglosamos [1]:
+
+- **Información y datos necesarios** que requiere el sistema [1].
+- **Condiciones lógicas** (manteniendo los conectores "y", "o" y negaciones) [1].
+- **Consecuencias** derivadas de cada caso [1].
+
+A partir de este desglose redactamos las dos propuestas conceptuales, definiendo qué función cumpliría un futuro agente automatizado, en qué momentos consultaría herramientas y cuándo solicitaría la intervención o revisión de una persona [1].
+
+---
+
+### 2. Diseño de los diagramas de flujo agénticos (Paso 5)
+
+Con la lógica de las dos sentencias aclarada, diseñamos la estructura de los dos diagramas de flujo [2]. Seguimos el esquema de lectura solicitado (Inicio → Datos de entrada → Evaluación de condición → Acciones/Resultados) [2, 9]. En aquellos caminos donde la regla original no definía una alternativa explícita, acordamos en equipo agregar derivaciones a revisión humana y lo registramos como una decisión propia de diseño del grupo [2, 10].
+
+---
+
+### 3. Encargo al agente y construcción por etapas (Paso 6)
+
+Le entregamos al agente de programación la consigna completa, la presentación de la startup asignada, las fichas con las sentencias, las propuestas redactadas y los diagramas de flujo [3]. Para evitar errores y mantener el control sobre el resultado, le pedimos trabajar en tres etapas sucesivas [3]:
+
+1. **Estructura HTML base:** maquetado general, secciones principales y contenedor para los desplegables [3].
+2. **Contenido y diagramas:** inyección de los textos redactados, inclusión del logo original de la startup y armado de los componentes visuales de los flujos [3].
+3. **Diseño y estilos CSS:** jerarquía visual, paleta de colores acorde a la startup e interactividad [3].
+
+---
+
+### 4. Pruebas de escritorio, accesibilidad e iteraciones (Paso 7)
+
+Una vez generada la primera versión de la landing, realizamos las comprobaciones en pantalla de computadora (desktop) [3]:
+
+- Verificamos que el logo original de la startup no se viera cortado ni deformado [3].
+- Comprobamos la legibilidad de ambos diagramas de flujo [3].
+- Probamos la apertura y cierre de los desplegables tanto con el **clic del mouse** como mediante la **navegación por teclado** (teclas Tab, Enter y Espacio) [3].
+- Simulamos recorridos para casos donde la condición lógica se cumplía y casos donde no se cumplía en ambas propuestas [3].
+
+#### 🔄 Evidencia de iteraciones y correcciones pedidas al agente:
+
+- **Problema 1 (Interacción):** Los desplegables abrían correctamente con el mouse pero no permitían foco ni apertura mediante teclado.
+  - _Pedido de cambio:_ Le solicitamos al agente ajustar los atributos de accesibilidad (`tabindex="0"`, `aria-expanded` y listener de eventos de teclado `keydown`) en los botones de los desplegables.
+- **Problema 2 (Diseño visual):** La imagen del diagrama de flujo en pantallas intermedias se desbordaba horizontalmente en la interfaz desktop.
+  - _Pedido de cambio:_ Le pedimos aplicar reglas CSS de ajuste responsive (`max-width: 100%; height: auto;`) y centrado dentro de la tarjeta contenedora.
+
+---
+
+### 5. Registro de Herramientas de IA y Modelos Utilizados (Punto 8)
+
+| Aplicación (Entorno de trabajo) | Modelo de IA (Nombre exacto) | Uso principal en el proyecto                                                                                 | Cambios e iteraciones solicitados                                                                 |
+| :------------------------------ | :--------------------------- | :----------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| **Cursor**                      | `Claude 3.5 Sonnet`          | Generación de la estructura HTML, hojas de estilo CSS e interactividad JavaScript de la landing page [3, 6]. | Corrección de accesibilidad en menúes desplegables y ajuste de diagramas legibles en desktop [3]. |
+| **ChatGPT (Web)**               | `GPT-4o`                     | Asistencia en la redacción preliminar de propuestas y despiece de condiciones de las sentencias [1].         | Refinado de tono para sintetizar los beneficios de cada solución en dos frases [2].               |
+
+_(Nota: Si alguna aplicación utilizada no informa la denominación exacta del modelo dentro de su interfaz, se registra como **"modelo no informado"** conforme a la consigna [4])._
