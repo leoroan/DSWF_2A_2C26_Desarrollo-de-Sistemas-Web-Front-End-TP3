@@ -71,6 +71,55 @@ Grupo #19 -NameLess-
 
 **Condición lógica:** R2 = NO sospechoso Y (VIP O urgente), equivalente a ¬S ∧ (V ∨ U).
 
+## 7.1 Matriz de verdad de comprobación
+
+La validación se realizó comparando las condiciones lógicas con los casos de prueba previstos para cada regla.
+
+### R1 — respuesta aprobada y envío controlado
+
+**Regla lógica:** R1 = C1 ∧ C2 ∧ C3 ∧ C4 ∧ C5 ∧ C6 ∧ C7 ∧ C8 ∧ C9 ∧ C10
+
+- C1: consulta frecuente y clara
+- C2: existe respuesta aprobada
+- C3: no requiere personalización
+- C4: no contiene reclamo
+- C5: no es VIP
+- C6: no es urgente
+- C7: no es sospechoso
+- C8: existe permiso de respuesta automática
+- C9: no tiene respuesta enviada
+- C10: no tiene respuesta en curso
+
+| Caso | C1 | C2 | C3 | C4 | C5 | C6 | C7 | C8 | C9 | C10 | Resultado |
+|------|----|----|----|----|----|----|----|----|----|-----|-----------|
+| R1-A | S | S | S | S | S | S | S | S | S | S | Solicita enviar la respuesta aprobada |
+| R1-B | N | S | S | S | S | S | S | S | S | S | No autoriza el envío |
+| R1-C | S | N | S | S | S | S | S | S | S | S | No autoriza el envío |
+| R1-D | S | S | N | S | S | S | S | S | S | S | No autoriza el envío |
+| R1-E | S | S | S | N | S | S | S | S | S | S | No autoriza el envío |
+| R1-F | S | S | S | S | N | S | S | S | S | S | No autoriza el envío por ser VIP |
+| R1-G | S | S | S | S | S | N | S | S | S | S | No autoriza el envío por ser urgente |
+| R1-H | S | S | S | S | S | S | N | S | S | S | No autoriza el envío por sospecha |
+| R1-I | S | S | S | S | S | S | S | N | S | S | No autoriza el envío sin permiso |
+| R1-J | S | S | S | S | S | S | S | S | N | S | No autoriza el envío si ya fue enviada |
+| R1-K | S | S | S | S | S | S | S | S | S | N | No autoriza el envío si ya está en curso |
+
+### R2 — atención prioritaria y derivación humana
+
+**Regla lógica:** R2 = ¬S ∧ (V ∨ U)
+
+| Caso | Sospechoso | VIP | Urgente | Resultado |
+|------|------------|-----|---------|-----------|
+| R2-A | N | S | N | Se deriva a persona sin responder automáticamente |
+| R2-B | N | N | S | Se deriva a persona sin responder automáticamente |
+| R2-C | N | S | S | Se deriva a persona sin responder automáticamente |
+| R2-D | N | N | N | R2 no se activa |
+| R2-E | S | S | N | R2 no se activa |
+| R2-F | S | N | S | R2 no se activa |
+| R2-G | S | S | S | R2 no se activa |
+
+**Conclusión:** la lógica implementada coincide con la definición formal de ambas reglas y con los resultados esperados de control de flujo.
+
 ## 8. Tecnologías utilizadas
 
 - HTML5 (semántico)
