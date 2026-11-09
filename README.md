@@ -129,16 +129,24 @@ La validación se realizó comparando las condiciones lógicas con los casos de 
 
 ## 9. Herramientas de IA utilizadas
 
-Herramienta Cline como agente de desarrollo utilizado para la creación completa del proyecto AutoMail AI: estructura, código, estilado, diseño, corrección de encoding, lógica de reglas R1 y R2, diagramas SVG y validación de caracteres.
+Para este TP se alternaron varias herramientas. En cada una se distingue la **aplicación** (el entorno donde se trabajó) del **modelo** (el que se seleccionó dentro de ella). Todo el código se generó con agentes; no se editó a mano.
 
-## 10. Aplicación o entorno de programación utilizado
+| Aplicación (entorno) | Modelo seleccionado | Para qué se usó | Correcciones pedidas |
+| :-- | :-- | :-- | :-- |
+| VS Code + extensión Cline | Claude 3.5 Sonnet | Estructura HTML, estilos CSS, JavaScript, diagramas SVG y lógica de R1 y R2 | Corrección de encoding, logo más grande, ajustes de navegación |
+| VS Code + extensión Cline | GPT-4o | [completar: qué hizo este modelo en Cline] | [completar] |
+| Cursor | [modelo no informado / completar] | [completar, si realmente se usó] | [completar] |
+| ChatGPT (web) | GPT-4o | Borrador de las propuestas y despiece de las condiciones de las sentencias | Ajuste del tono de los beneficios |
+| [completar: app de la auditoría] | GPT-6 Luna | Auditoría final del proyecto | [completar] |
+| Claude (aplicación) | modelo no informado | Revisión final contra la rúbrica del TP3 | Ver sección 19, punto 6 |
 
-VS Code con Cline como agente de desarrollo utilizado para la codificación, corrección de encoding, diseño de estilos y implementación de la lógica de las reglas R1 y R2.
+## 10. Aplicación o entorno de programación
 
-## 11. Modelo de IA seleccionado
+VS Code (con la extensión Cline), Cursor y ChatGPT web, según se indica en la tabla de la sección 9.
 
-Modelos usados: "Claude 3.5 Sonnet" y "GPT-4o"
-Auditado por : GPT-6 Luna
+## 11. Modelos de IA seleccionados
+
+Claude 3.5 Sonnet, GPT-4o y GPT-6 Luna (auditoría). El detalle de cuál se usó en cada aplicación y para qué está en la tabla de la sección 9.
 
 ## 12. Para qué se utilizó cada herramienta y modelo
 
