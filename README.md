@@ -17,7 +17,7 @@ Bloque asignado: Respuesta y atención humana.
 
 ## 4. Nombre del grupo
 
-Grupo #19 -NameLess-
+Grupo #19 -Expertia-
 
 ## 5. Integrantes y aporte concreto de cada integrante
 
@@ -196,7 +196,7 @@ El sitio es estático y puede publicarse en cualquier servicio de hosting estát
 
 1. Subir los archivos del repositorio al servicio de hosting elegido.
 2. Asegurar que `index.html` esté en la raíz.
-3. [PENDIENTE: el equipo debe completar la URL de la landing publicada una vez realizada la publicación.]
+3. La landing ya está publicada. Las URLs se encuentran en la sección 18 de este README.
 
 ## 17. URL del repositorio
 
